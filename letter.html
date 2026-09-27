@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для Кати ❤️</title>
+
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(circle at 20% 20%, #68104f, transparent 35%),
+        radial-gradient(circle at 80% 80%, #29105c, transparent 35%),
+        linear-gradient(135deg, #090014, #21001f, #080014);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+        .card {
+    width: 700px;
+    max-width: 92%;
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 180, 220, 0.4);
+
+    box-shadow:
+        0 0 25px rgba(255, 60, 160, 0.4),
+        0 0 60px rgba(255, 60, 160, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    position: relative;
+    z-index: 2;
+
+    animation: appear 1.2s ease;
+}
+        .heart {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+
+    animation: pulse 1.5s infinite;
+
+    filter:
+        drop-shadow(0 0 8px #ff4f9a)
+        drop-shadow(0 0 20px #ff4f9a);
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin: 10px 0 30px;
+
+    color: #ff9dcc;
+
+    text-shadow:
+        0 0 10px #ff4f9a,
+        0 0 25px #ff4f9a;
+}
+        p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 18px 0;
+    color: #fff1f8;
+}
+
+.final {
+    text-align: center;
+    margin-top: 30px;
+
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff9dcc;
+
+    text-shadow: 0 0 15px #ff4f9a;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 25px;
+
+    color: #ffb5d6;
+    font-style: italic;
+}
+        @keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.2);
+    }
+}
+        .floating-heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp 6s linear forwards;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+        button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #ff4f9a;
+    color: white;
+
+    font-size: 17px;
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(255, 79, 154, 0.6);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 79, 154, 0.9);
+}
+        #secretMessage {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+
+    color: #ffb5d6;
+    font-size: 20px;
+
+    text-shadow: 0 0 12px #ff4f9a;
+
+    animation: secretAppear 1s ease;
+}
+
+@keyframes secretAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>Катя</h1>
+    <p>
+    Я долго думал, стоит ли писать тебе это письмо.
+    Но понял, что иногда лучше просто честно сказать то,
+    что чувствуешь.
+</p>
+
+<p>
+    Несмотря на время и расстояние, ты всё ещё остаёшься
+    очень важным для меня человеком.
+</p>
+
+<p>
+    Я всё ещё люблю тебя и часто вспоминаю всё хорошее,
+    что было между нами.
+</p>
+
+<p>
+    Я не хочу давить на тебя или заставлять тебя что-либо менять.
+    Мне просто хотелось, чтобы ты знала, что мои чувства были
+    и остаются искренними.
+</p>
+    <div class="final">
+    Я всё ещё тебя люблю ❤️
+</div>
+
+<div class="signature">
+    Береги себя.<
+    От человека, которому ты очень дорога.
+</div>
+<button onclick="showMessage()">Нажми сюда 💗</button>
+
+
+<div id="secretMessage">
+
+    <p>
+        Катя, я хочу сказать тебе то, что иногда очень сложно
+        выразить словами. ❤️
+    </p>
+
+    <p>
+        Я не знаю, получится ли у меня подобрать именно те слова,
+        которые смогут передать всё, что я чувствую к тебе.
+        Но я всё равно хочу попробовать.
+    </p>
+
+    <p>
+        Я очень тебя люблю. И это не просто несколько красивых слов.
+        Ты действительно занимаешь огромное место в моём сердце.
+        Даже когда между нами расстояние, даже когда мы не разговариваем,
+        мои чувства к тебе никуда не исчезают.
+    </p>
+
+    <p>
+        Я часто вспоминаю наши разговоры, наши шутки и моменты,
+        когда мне было просто хорошо от того, что ты рядом.
+        Иногда одна маленькая вещь напоминает мне о тебе,
+        и я снова понимаю, насколько ты для меня особенная.
+    </p>
+
+    <p>
+        Мне дороги даже самые обычные моменты, связанные с тобой,
+        потому что именно они стали для меня чем-то особенным.
+    </p>
+
+    <p>
+        Я не хочу давить на тебя или заставлять тебя что-либо делать.
+        Мне просто важно быть с тобой честным и сказать,
+        что мои чувства к тебе настоящие.
+    </p>
+
+    <p>
+        Я не знаю, что будет дальше и каким окажется наше будущее.
+        Но я точно знаю одно: ты стала человеком,
+        который навсегда останется очень важной частью моей жизни.
+    </p>
+
+    <p>
+        Спасибо тебе за всё хорошее, что когда-либо было между нами.
+        Спасибо за воспоминания, улыбки, разговоры и моменты,
+        которые до сих пор заставляют меня улыбаться.
+    </p>
+
+    <p>
+        Катя, я люблю тебя. Очень сильно. ❤️
+    </p>
+
+    <p>
+        Сколько бы между нами ни было километров или времени,
+        я всё равно буду хранить в сердце всё хорошее,
+        что связано с тобой.
+    </p>
+
+    <p>
+        Я не прошу тебя отвечать мне чем-то таким же большим.
+        Я просто хотел однажды сказать тебе всё это честно.
+    </p>
+
+    <p class="final">
+        Ты очень дорога мне. ❤️
+    </p>
+
+    <p class="signature">
+        Я всё ещё люблю тебя, Катя. ❤️
+    </p>
+
+</div>
+</div>
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > 0.5 ? "❤️" : "💗";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 600);
+    function showMessage() {
+    const message = document.getElementById("secretMessage");
+
+    if (message.style.display === "block") {
+        message.style.display = "none";
+    } else {
+        message.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>
